@@ -1,41 +1,62 @@
 // File system es un modulo de node.js con metodos para trabajar con ficheros.
 const fs = require("fs");
-// Path provee facilidades para trabajar con ficheros y direcctorios
+// Path es un módulo que  provee facilidades para trabajar con ficheros y direcctorios
 const path = require("path");
-
-
+//marqued
+const marked = require("marked");
 //Metodo que evalua sin la ruta existe
 const pathExist = (route) => fs.existsSync(route);
 //Evalua si la ruta es absoluta de lo contrario lo convierte
 const pathAbsolute = (route) =>
   path.isAbsolute(route) ? route : path.resolve(route);
 
- //Evalua si la ruta es un archivo
- const getFile = (route) => fs.statSync(route).isFile();
-
- 
+//Evalua si la ruta es un archivo
+const getFile = (route) => fs.statSync(route).isFile();
 
 //Evalua si el archivo es Markdown
 const isMarkdownFile = (route) => path.extname(route) === ".md";
 
 const getAllFiles = (route) => {
   const arrFiles = [];
-  const newPath = pathAbsolute(route)
-  if( getFile(newPath)){
-    if(isMarkdownFile(newPath)){
-    arrFiles.push(newPath);
+  const newPath = pathAbsolute(route);
+  if (getFile(newPath)) {
+    if (isMarkdownFile(newPath)) {
+      arrFiles.push(newPath);
     }
-
-  }else{
-    fs.readdirSync(newPath).forEach(element =>{
+  } else {
+    fs.readdirSync(newPath).forEach((element) => {
       const array = getAllFiles(path.join(newPath, element));
-      arrFiles.push(...array)// tambien con concat es posible
+      arrFiles.push(...array); // tambien con concat es posible
     });
   }
-  
+
   return arrFiles;
-}
- console.log('soy recursividad'+ getAllFiles ('C:\\Users\\vivia\\Documents\\md-links\\LIM013-fe-md-links\\src'));
+};
+
+const getMdLInk = (route) => {
+  if (!pathExist(route)) {
+    throw new Error("Invalid Path");
+  } else {
+    const arrOfMd = getAllFiles(route);
+    const renderer = new marked.Renderer();
+    const arrOfLinks = [];
+    arrOfMd.forEach((fileRoute) => {
+      const file = fs.readFileSync(fileRoute, "utf8");
+      renderer.link = (urlFile, _ , urlText) => {
+        arrOfLinks.push({
+          href: urlFile,
+          text: urlText,
+          path: fileRoute,
+
+        });
+      };
+      marked(file, { renderer });
+    });
+    return arrOfLinks;
+  }
+};
+//console.log(getMdLInk("C:/Users/vivia/Documents/md-links/LIM013-fe-md-links/test_example"));
+
 
 module.exports = {
   pathExist,
@@ -43,4 +64,5 @@ module.exports = {
   getFile,
   isMarkdownFile,
   getAllFiles,
+  getMdLInk,
 };
