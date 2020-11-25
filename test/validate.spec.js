@@ -81,7 +81,7 @@ describe("Link validation", () => {
       expect(typeof validate.validateLinks).toBe("function");
     });
     it("should return an array with the properties of: href,text, path, status y StatusText ", () => {
-      expect(validate.validateLinks("./test_example")).resolves.toBe(
+      expect(validate.validateLinks("./test_example")).resolves.toEqual(
         ouputValidateLinks
       );
     });
