@@ -1,32 +1,35 @@
-const fetch = require("node-fetch");
-const routes = require("./util.js")
+const fetch = require('node-fetch');
+const routes = require('./util.js');
 
-const validateLinks= (route) => {
-    const arrayOfLinks = routes.getMdLInk(route);
-    const arrayLinksPromises = arrayOfLinks.map((element) => fetch(element.href)
-    .then((res)=>{
-      if(res.status >=200 && res.status < 400){
-        return{
+const validateLinks = (route) => {
+  const arrayOfLinks = routes.getMdLInk(route);
+  const arrayLinksPromises = arrayOfLinks.map((element) => fetch(element.href)
+    .then((res) => {
+      if (res.status >= 200 && res.status < 400) {
+        return {
           ...element,
           status: res.status,
-          statusText: res.statusText
+          statusText: res.statusText,
         };
       }
       return {
         ...element,
         status: res.status,
-        statusText: "FAIL",
+        statusText: res.statusText, // Not found 404
       };
     })
-    .catch(()=> ({
+    .catch(() => ({
       ...element,
-      status: "ERROR",
-      statusText: "FAIL"
+      status: 'ERROR',
+      statusText: 'FAIL',
     })));
-    return Promise.all(arrayLinksPromises);
-  };
-  validateLinks('./test_example').then((res) => console.log(res));
 
-  module.exports = {
-      validateLinks,
-  }
+  // se cumple cuando todas las promesas del iterable dado se han cumplido
+  // Si se pasa un array vacío a all , la promesa se cumple inmediatamente.
+  return Promise.all(arrayLinksPromises);
+};
+// validateLinks('./test_example').then((res) => console.log(res));
+
+module.exports = {
+  validateLinks,
+};
