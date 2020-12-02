@@ -20,14 +20,14 @@ const validateFalse = [
   },
 ];
 
-describe('Funcion validar los Link encontrados en Archivo md', () => {
-  it('Deberia retornar un array de obj sin validar los enlaces', () => expect(mdLinks('other-dir\\md-file')).resolves.toEqual(validateFalse));
+describe('Function to validate the Links found in md file', () => {
+  it('It should return an object array without validating the links', () => expect(mdLinks('other-dir\\md-file')).resolves.toEqual(validateFalse));
 
-  it('Deberia validar los enlaces', (done) => mdLinks('other-dir\\md-file', { validate: true }).then((response) => {
+  it('should validate the links', (done) => mdLinks('other-dir\\md-file', { validate: true }).then((response) => {
     expect(response).toEqual(validateTrue);
     done();
   }));
-  it('Deberia no validar los enlaces', (done) => mdLinks('other-dir\\md-file', { validate: false })
+  it('should validate the links', (done) => mdLinks('other-dir\\md-file', { validate: false })
     .then((response) => {
       expect(response).toEqual(validateFalse);
       done();
