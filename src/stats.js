@@ -15,7 +15,15 @@ const validateAndStats = (hrefLInk) => {
   return result;
 };
 
+const ObjValidate = (arg1, arg2) => {
+  if ((arg1 === '--stats' && arg2 === '--validate') || (arg1 === '--validate' && arg2 === '--stats') || (arg1 === '--validate' && arg2 === undefined)) {
+    return { validate: true };
+  }
+  return { validate: false };
+};
+
 module.exports = {
   statsOflinks,
   validateAndStats,
+  ObjValidate,
 };

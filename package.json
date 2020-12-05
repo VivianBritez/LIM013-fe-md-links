@@ -1,8 +1,11 @@
 {
-  "name": "lim013-fe-md-links",
+  "name": "md-links",
   "version": "1.0.0",
   "description": "* [1. Preámbulo](#1-preámbulo)\r * [2. Resumen del proyecto](#2-resumen-del-proyecto)\r * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)\r * [4. Consideraciones generales](#4-consideraciones-generales)\r * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)\r * [6. Entregables](#6-entregables)\r * [7. Pistas, tips y lecturas complementarias](#7-pistas-tips-y-lecturas-complementarias)\r * [8. Checklist](#8-checklist)",
-  "main": "src/index.js",
+  "main": "src/cli.js",
+  "bin": {
+    "mdLinks": "src/cli.js"
+  },
   "directories": {
     "test": "test"
   },
@@ -10,7 +13,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "jest --coverage",
-    "start": "node src/util.js"
+    "start": "node src/cli.js"
   },
   "repository": {
     "type": "git",
@@ -38,7 +41,9 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "chart.js": "^2.9.4",
+    "fetch-mock": "^9.11.0",
     "marked": "^1.2.3",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "outside-cli": "^1.0.0"
   }
 }
