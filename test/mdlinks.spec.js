@@ -1,6 +1,6 @@
 const path = require('path');
 const { fetchMock } = require('../_mocks_/node-fetch.js');
-const { mdLinks } = require('../src/md-links.js');
+const { mdLinks } = require('../src/mdLinks.js');
 
 fetchMock
   .mock('https://github.es/jsdom', 404)

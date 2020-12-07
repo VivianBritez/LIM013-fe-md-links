@@ -95,7 +95,7 @@ describe('Link validation', () => {
 
 describe('Function to validate the Links found in md file', () => {
   it('Should return an array of object', (done) => {
-    validate.validateLinks('./test_example').then((response) => {
+    validate.validateLinks('test_example').then((response) => {
       expect(response).toEqual(ouputValidateLinks);
       done();
     });

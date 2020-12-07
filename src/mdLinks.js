@@ -1,7 +1,7 @@
 const route = require("./util.js");
 const validate = require("./validate.js");
 
-const mdLinks = (inputPath, options) =>
+const mdLinks = (inputPath, options = { validate: false }) =>
   new Promise((resolve) => {
     const pathAbsolute = route.pathAbsolute(inputPath);
     if (options.validate === true) {
