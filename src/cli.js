@@ -17,7 +17,6 @@ const ObjValidate = (arg1, arg2) => {
   return { validate: false };
 };
 
-console.log("hello soy cli", ...args);
 
 // CLI
 const cli = (route, arg1, arg2) => {
