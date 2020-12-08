@@ -64,7 +64,7 @@ const cli = (route, arg1, arg2) => {
       }
       if (arg1 !== "--stats" && arg1 !== "--validate" && arg1 !== undefined) {
         result = chalk.red(
-          'The option does not exist. You can use "mdLinks --help" for more information'
+          'The option does not exist. You can use "md-links --help" for more information'
         );
       }
       return result;
@@ -84,7 +84,7 @@ const help = `
   ${chalk.gray`    --stats              `} Basic stadistics on link.
   ${chalk.gray`    --validate           `} Link validation.
   ${chalk.gray`    --stats --validate   `} Stats and validate.
-  ${chalk.gray`    -c, --contact        `} Vivian Britez (vivianbritez91@gmail.com).
+  ${chalk.gray`    -c, contact          `} contact.
   `;
 
 if (args.length < 4) {

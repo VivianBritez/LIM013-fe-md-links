@@ -55,7 +55,7 @@ const ouputValidateLinks = [
     text: 'foro de la comunidad',
     path:
       'C:\\Users\\vivia\\Documents\\md-links\\LIM013-fe-md-links\\test_example\\directory\\file.md',
-    status: 'ERROR',
+    status: '500',
     statusText: 'FAIL',
   },
   {

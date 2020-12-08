@@ -43,7 +43,7 @@ const getMdLInk = (route) => {
   } else {
     const arrOfMd = getAllFiles(route);
     const renderer = new marked.Renderer(); // customizar dependiendo de la sintaxis
-    const arrOfLinks = [];
+    const arrOfLinks= [];
     arrOfMd.forEach((fileRoute) => {
       const file = fs.readFileSync(fileRoute, 'utf8');
       renderer.link = (urlFile, _, urlText) => {
@@ -59,7 +59,7 @@ const getMdLInk = (route) => {
     return arrOfLinks;
   }
 };
-// console.log(getMdLInk('C:/Users/vivia/Documents/md-links/LIM013-fe-md-links/test_example'));
+//console.log("SOY GETMEDLINK",getMdLInk('C:/Users/vivia/Documents/md-links/LIM013-fe-md-links/test_example'));
 
 module.exports = {
   pathExist,

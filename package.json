@@ -1,7 +1,7 @@
 {
-  "name": "md-links",
+  "name": "vivianbri-md-links",
   "version": "1.0.0",
-  "description": "* [1. Preámbulo](#1-preámbulo)\r * [2. Resumen del proyecto](#2-resumen-del-proyecto)\r * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)\r * [4. Consideraciones generales](#4-consideraciones-generales)\r * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)\r * [6. Entregables](#6-entregables)\r * [7. Pistas, tips y lecturas complementarias](#7-pistas-tips-y-lecturas-complementarias)\r * [8. Checklist](#8-checklist)",
+  "description": " evaluation and statistics of markdowns files" ,
   "main": "src/cli.js",
   "bin": {
     "md-links": "src/cli.js"
@@ -31,7 +31,7 @@
   ],
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.2.0",
+    "eslint": "^7.15.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "fetch-mock-jest": "^1.5.1",
@@ -42,7 +42,7 @@
     "chalk": "^4.1.0",
     "chart.js": "^2.9.4",
     "fetch-mock": "^9.11.0",
-    "marked": "^1.2.3",
+    "marked": "^1.2.5",
     "node-fetch": "^2.6.1",
     "outside-cli": "^1.0.0"
   }

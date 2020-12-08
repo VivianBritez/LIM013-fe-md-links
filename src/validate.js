@@ -9,19 +9,17 @@ const validateLinks = (route) => {
         ...element,
         status: res.status,
         statusText: res.statusText,
-      }.catch(() => ({
+      })).catch(() => ({
         ...element,
-        status: "ERROR",
+        status: "500",
         statusText: "FAIL",
-      })))
-    )
+      }))
   );
-
   // se cumple cuando todas las promesas del iterable dado se han cumplido
   // Si se pasa un array vacío a all , la promesa se cumple inmediatamente.
   return Promise.all(arrayLinksPromises);
 };
-validateLinks('test_example').then((res) => console.log('soy validate', res));
+//validateLinks('test_example').then((res) => console.log('soy validate', res));
 
 module.exports = {
   validateLinks,
