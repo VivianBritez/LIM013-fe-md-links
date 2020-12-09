@@ -1,5 +1,5 @@
 {
-  "name": "vivianbri-md-links",
+  "name": "vivianbri",
   "version": "1.0.4",
   "description": " evaluation and statistics of markdowns files",
   "main": "src/cli.js",
@@ -43,7 +43,6 @@
     "chart.js": "^2.9.4",
     "fetch-mock": "^9.11.0",
     "marked": "^1.2.5",
-    "node-fetch": "^2.6.1",
-    "outside-cli": "^1.0.0"
+    "node-fetch": "^2.6.1"
   }
 }

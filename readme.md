@@ -24,20 +24,20 @@ Develop a functional library that is capable of returning the links found within
 - Open the terminal on your computer.
 - Position yourself in the project folder you want to analyze.
 - Paste the following command in terminal:
-- npm i vivianbri-md-links
+- npm i vivianbri-md
 
 ### Global way
 
-- npm install -g vivianbri-md-links
+- npm install -g vivianbri-md
 
 ## 4.How to use?
 
-vivianbri-md-links can be run from the terminal or from a JavaScript file.
+vivianbri-md can be run from the terminal or from a JavaScript file.
 
 ### From terminal
 
-1. Have vivianbri-md-links installed
-2. Type in terminal md-links + Enter
+1. Have vivianbri-md installed
+2. Type in terminal md + Enter
 3. To know which links are still valid add the --validate flag:
 4. md-links file- - validate
    <img src="https://i.ibb.co/kMFMMvs/2020-12-07-12.png" alt="2020-12-07-12" border="0">
