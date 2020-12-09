@@ -1,6 +1,6 @@
 {
   "name": "vivianbri-md-links",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": " evaluation and statistics of markdowns files",
   "main": "src/cli.js",
   "bin": {
