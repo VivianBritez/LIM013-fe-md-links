@@ -1,4 +1,4 @@
-#Markdown Links Validator
+<h1>Markdown Links</h1>
 
 - [1. Background Project](#1-background-project)
 - [2. Objective of the project](#2-objetive-of-the-project)
