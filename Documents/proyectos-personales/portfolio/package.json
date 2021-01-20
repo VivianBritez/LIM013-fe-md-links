@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portafolio personal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VivianBritez/portfolio.git"
+  },
+  "keywords": [
+    "desarrolladora",
+    "web"
+  ],
+  "author": "Vivian Britez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VivianBritez/portfolio/issues"
+  },
+  "homepage": "https://github.com/VivianBritez/portfolio#readme"
+}

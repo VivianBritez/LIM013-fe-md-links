@@ -1,0 +1,202 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio | Responsive Website Design</title>
+</head>
+
+<body>
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <header>
+        <a href="#" class="logo">Portfolio</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About me</a></li>
+            <li><a href="#services" onclick="toggleMenu();">Skills</a></li>
+            <li><a href="#work" onclick="toggleMenu();">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contacts</a></li>
+        </ul>
+    </header>
+
+    <section class="banner" id="home">
+        <div class="textBx">
+            <h2>Hola , soy<br><span>Vivian Britez.</span></h2>
+            <h3>Desarrolladora Front End.</h3>
+            <a href="#about" class="btn">About me</a>
+    </section>
+
+    <section class="about" id="about">
+        <div class="heading">
+            <h2>About me</h2>
+        </div>
+        <div class="content">
+            <div class="contentBx w50">
+                <h2>Desarrolladora Front end .</h2>
+                <p>Egresada de Laboratoria, con experiencia en ventas y negociación. He supervisado equipo de atención al cliente generando incremento en las ventas y mayor transparencia y agilidad en los procesos internos.
+                    Soy una persona que se ocupa por mejorar, autodidacta, resiliente y con apertura. En camino a ser una Desarrolladora Fullstack.</p>
+            </div>
+            <div class="w50">
+                <!-- <img src="https://sun9-18.userapi.com/c850608/v850608322/9d6bd/EOOXF9vXQK0.jpg">-->
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="heading white">
+            <h2>Hard skills</h2>
+        </div>
+        <div class="content">
+            <div class="servicesBx">
+                <img src="https://img.icons8.com/nolan/64/javascript.png" />
+                <h2>Javascript</h2>
+
+            </div>
+            <div class="servicesBx">
+                <img src="https://img.icons8.com/nolan/64/html.png" />
+                <h2>HTML</h2>
+
+            </div>
+            <div class="servicesBx">
+                <img src="https://img.icons8.com/color/48/000000/css3.png" />
+                <h2>CSS</h2>
+
+            </div>
+            <div class="servicesBx">
+                <img src="https://img.icons8.com/color/48/000000/firebase.png" />
+                <h2>Firebase</h2>
+
+            </div>
+            <div class="servicesBx">
+                <img src="https://img.icons8.com/color/48/000000/nodejs.png" />
+                <h2>Node.js</h2>
+
+            </div>
+            <div class="servicesBx">
+                <img src="https://img.icons8.com/nolan/64/mysql.png" />
+                <h2>My sql</h2>
+
+            </div>
+          <!--  <div class="servicesBx">
+                <img src="https://img.icons8.com/color/48/000000/angularjs.png" />
+                <h2>Angular</h2>
+
+            </div>-->
+            <div class="servicesBx">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#e67e22"><path d="M67.1875,5.375c-16.30237,0 -29.5625,13.26013 -29.5625,29.5625c0,8.91131 3.98024,16.8945 10.2356,22.31885c-9.28224,4.9913 -15.6106,14.79817 -15.6106,26.05615c0,10.00086 5.00765,18.8354 12.62915,24.1875c-7.6215,5.3521 -12.62915,14.18664 -12.62915,24.1875c0,16.30238 13.26013,29.5625 29.5625,29.5625c16.30237,0 29.5625,-13.26012 29.5625,-29.5625v-29.5625v-37.625h18.8125c16.30238,0 29.5625,-13.26013 29.5625,-29.5625c0,-16.30237 -13.26012,-29.5625 -29.5625,-29.5625zM67.1875,16.125h43c10.37375,0 18.8125,8.43875 18.8125,18.8125c0,10.37375 -8.43875,18.8125 -18.8125,18.8125h-18.8125h-24.1875c-10.37375,0 -18.8125,-8.43875 -18.8125,-18.8125c0,-10.37375 8.43875,-18.8125 18.8125,-18.8125zM61.8125,64.5h5.375h13.4375v37.625h-18.8125c-10.37375,0 -18.8125,-8.43875 -18.8125,-18.8125c0,-10.37375 8.43875,-18.8125 18.8125,-18.8125zM112.875,64.5c-11.87412,0 -21.5,9.62588 -21.5,21.5c0,11.87412 9.62588,21.5 21.5,21.5c11.87412,0 21.5,-9.62588 21.5,-21.5c0,-11.87412 -9.62588,-21.5 -21.5,-21.5zM61.8125,112.875h18.8125v18.8125c0,10.37375 -8.43875,18.8125 -18.8125,18.8125c-10.37375,0 -18.8125,-8.43875 -18.8125,-18.8125c0,-10.37375 8.43875,-18.8125 18.8125,-18.8125z"></path></g></g></svg>
+                <h2>Figma</h2>
+
+            </div>
+            <div class="servicesBx">
+                <img src="https://img.icons8.com/nolan/64/github.png" />
+                <h2>GitHub</h2>
+
+            </div>
+        </div>
+
+        <div class="heading white">
+            <h2>Soft skills</h2>
+        </div>
+        <div class="content">
+            <div class="servicesBx">
+                <h2>Resciliencia</h2>
+
+            </div>
+            <div class="servicesBx">
+                <h2>Escucha activa</h2>
+
+            </div>
+            <div class="servicesBx">
+                <h2>Empatica</h2>
+
+            </div>
+            <div class="servicesBx">
+                <h2>Autodidacta</h2>
+
+            </div>
+    </section>
+
+    <section class="work" id="work">
+        <div class="heading">
+            <h2>Projects</h2>
+        </div>
+        <div class="content">
+            <div class="workBx">
+                <img src="https://i.ibb.co/QmW3xx7/2020-12-30.png" class="img" alt="2020-12-30" border="0">
+                <h4>Pokedex</h4>
+                <p>Página web con data de Pokemones donde el usuario  visualiza un set de datos e interactúa con ellos.Desarrollado con Html, CSS, Javascript, fetch </p>
+                <a href="https://vivianbritez.github.io/LIM013-data-lovers/src/"><img src="https://img.icons8.com/dotty/80/000000/tv-show.png" class="icons" /></a>
+                <a href="https://github.com/VivianBritez/LIM013-data-lovers"><img src="https://img.icons8.com/wired/64/000000/code.png" class="icons" /></a>
+            </div>
+            <div class="workBx">
+                <img src="https://i.ibb.co/hCYcgYm/views.png" alt="views" class="img" alt="2020-12-30" border="0">
+                <h4>Leaders are Readers</h4>
+                <p> Red social donde el usuario puede registrarse con correo o email como también crear, editar y eliminar sus publicaciones.Patron MVC, Firebase(manejo de concurrencia y optimización en la estructura de datos), Testeo manual y asíncrono.
+                </p>
+              
+                <a href="https://vivianbritez.github.io/LIM013-fe-social-network/src/"><img src="https://img.icons8.com/dotty/80/000000/tv-show.png" class="icons" /></a>
+                <a href="https://github.com/VivianBritez/LIM013-fe-social-network"><img src="https://img.icons8.com/wired/64/000000/code.png" class="icons" /></a>
+            
+        </div>  
+            <div class="workBx">
+                <img src="https://i.ibb.co/6gGrZpM/2021-01-19-5.png" alt="2021-01-19-5" class="img" border="0">
+                <h4>Md-links</h4>
+                <p>Módulo que extrae todos los archivos markdowns, evalúa links, mostrando una estadística de links rotos, únicos y el total. Construcción de API y módulo con Node.js , Javascript, Fetch, consumo de promesas,  testeo asíncrono.
+                </p>
+
+                <a href="https://github.com/VivianBritez/LIM013-fe-md-links"><img src="https://img.icons8.com/wired/64/000000/code.png" class="icons" /></a>
+            </div>
+            <div class="workBx">
+                <img src="https://i.ibb.co/VpDxFwF/Sale.png" alt="Sale" class="img" border="0">
+                <h4>Burguer-queen -api</h4>
+                <p> Se construyo un servidor web que debe servir JSON sobre HTTP desplegado en AWS, a través del cual podemos enviarle consultas (request) y obtener respuestas (response). Tecnologia: Node.js, Express, MySql </p>
+                <a href="https://github.com/VivianBritez/LIM013-fe-burger-queen-api"><img src="https://img.icons8.com/wired/64/000000/code.png" class="icons" /></a>
+            </div>
+        </div>
+
+        <div class="heading">
+            <a href="https://github.com/VivianBritez" class="btn">View More</a>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="heading white">
+            <h2>Contacts</h2>
+        </div>
+        <div class="content">
+            <div class="contactInfo">
+                <h3>Contact Info</h3>
+                <div class="box">
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>962480477</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>vivianbritez91@gmail.com</p>
+                    </div>
+                    <div>
+                        <h3>Curriculum Vitae</h3>
+                        <a href="https://resume.io/r/cXT5SBrYV">
+                            <p class="link-cv">Revisar CV</p>
+                        </a>
+                    </div>
+                    <div class="redes"></div>
+                    <div class="text">
+                        <h3>Linkedin</h3>
+                        <a href="https://www.linkedin.com/in/vivian-britez-a941a91ba/"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>
